@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope Foundation - Home</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #2563eb;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* HERO SLIDER */
+    .slider {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: 0.5s;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .btns {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .btns button {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .donate-btn {
+      background: #e53e3e;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Hope Foundation</h1>
+  <p>Giving Hope, Changing Lives</p>
+</header>
+
+<nav>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="Projects.html">Projects</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+<!-- SLIDER -->
+<div class="slider">
+  <div class="slides" id="slides">
+
+    <div class="slide">
+      <img src="https://picsum.photos/id/1011/1200/400">
+      <div class="caption">Helping children access education</div>
+    </div>
+
+    <div class="slide">
+      <img src="https://picsum.photos/id/1015/1200/400">
+      <div class="caption">Healthcare for communities</div>
+    </div>
+
+    <div class="slide">
+      <img src="https://picsum.photos/id/1016/1200/400">
+      <div class="caption">Empowering lives</div>
+    </div>
+
+  </div>
+
+  <div class="btns">
+    <button onclick="prev()">❮</button>
+    <button onclick="next()">❯</button>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section>
+  <h2>Welcome to Hope Foundation</h2>
+  <p>We are committed to improving lives through education, healthcare, and community support programs.</p>
+
+  <a href="#" class="donate-btn">Donate Now</a>
+</section>
+
+<footer>
+  <p>© 2026 Hope Foundation</p>
+</footer>
+
+<script>
+  let index = 0;
+
+  function show(i) {
+    const slides = document.getElementById("slides");
+    const total = slides.children.length;
+
+    if (i >= total) index = 0;
+    else if (i < 0) index = total - 1;
+    else index = i;
+
+    slides.style.transform = "translateX(" + (-index * 100) + "%)";
+  }
+
+  function next() {
+    show(index + 1);
+  }
+
+  function prev() {
+    show(index - 1);
+  }
+
+  setInterval(next, 4000);
+</script>
+
+</body>
+</html>
+</body>
+</html>

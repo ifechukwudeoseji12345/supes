@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - Hope Foundation NGO</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f0f8ff;
+  color: #1a202c;
+}
+
+/* HEADER */
+header {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* NAV */
+nav {
+  background: #2563eb;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+/* DONATE HERO */
+.hero {
+  background: #1e3a8a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hero button:hover {
+  background: #c53030;
+}
+
+/* DONATION OPTIONS */
+.container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* FORM */
+.donate-form {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.donate-form input,
+.donate-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.donate-form button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.donate-form button:hover {
+  background: #1e3a8a;
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Donate to Glow Up Kids Support Foundation</h1>
+  <p>Your support changes lives</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="Projects.html">Projects</a>
+  <a href="donate.html">Donate</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Make a Difference Today</h2>
+  <p>Every donation helps provide food, education, and healthcare.</p>
+  <button onclick="alert('Thank you for your kindness ❤️')">Donate Now</button>
+</section>
+
+<!-- DONATION LEVELS -->
+<section class="container">
+  <h2>Choose Donation Amount</h2>
+
+  <div class="cards">
+    <div class="card">₦1,000<br>Feeds a child</div>
+    <div class="card">₦5,000<br>Supports education</div>
+    <div class="card">₦10,000<br>Medical aid</div>
+    <div class="card">Custom<br>Any amount helps</div>
+  </div>
+</section>
+
+<!-- DONATION FORM -->
+<section>
+  <form class="donate-form" onsubmit="submitDonate(event)">
+    <h2>Donation Form</h2>
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+
+    <select required>
+      <option value="">Select Amount</option>
+      <option>₦1,000</option>
+      <option>₦5,000</option>
+      <option>₦10,000</option>
+      <option>Custom</option>
+    </select>
+
+    <button type="submit">Proceed to Donate</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Glow Up Kids Support Foundation </p>
+</footer>
+
+<script>
+function submitDonate(e) {
+  e.preventDefault();
+  alert("Thank you for your donation request ❤️ We will contact you soon.");
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>
