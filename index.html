@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Up Kids Foundation</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Up Kids Foundation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f0f8ff; /* light blue background */
+      color: #1a202c;
+    }
+
+    header {
+      background: #1e3a8a; /* deep blue */
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #2563eb; /* bright blue */
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ===================== SLIDER ===================== */
+    /* Container holding the entire slider */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden; /* hides overflow images */
+    }
+
+    /* Wrapper for all slides placed side by side */
+    .slides {
+      display: flex; /* aligns slides horizontally */
+      width: 300%; /* 3 slides = 300% */
+      transition: transform 0.5s ease-in-out; /* smooth slide animation */
+    }
+
+    /* Individual slide */
+    .slide {
+      width: 100%;
+      flex-shrink: 0; /* prevents shrinking */
+      position: relative;
+    }
+
+    /* Slide image */
+    .slide img {
+      width: 40%;
+      height: 400px;
+      object-fit: cover; /* keeps image proportion */
+    }
+
+    /* Caption text over each slide */
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.6);
+      color: yellow;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    /* Navigation buttons (prev/next) */
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .buttons button {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .buttons button:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #ffffff; /* white cards */
+      border: 1px solid #cbd5e1;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    /* Donate button styling */
+    .donate-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #e53e3e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background: #c53030;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Glow Up Kids Support Foundation </h1>
+  <p>Making the world a better place</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="Projects.html">Projects</a>
+  <a href="Contacts.html">Contact</a>
+</nav>
+
+<div class="slider">
+  <div class="slides" id="slides">
+
+    <!-- Slide 1 -->
+    <div class="slide">
+      <img src="group-african-kids-classroom.jpg">
+      <div class="caption">Providing education to underprivileged children</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="sick.png">
+      <div class="caption">Healthcare support for rural communities</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="water.png">
+      <div class="caption">Empowering people through community programs</div>
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We are a non-profit organization dedicated to helping communities through education, health, and empowerment programs.</p>
+
+  <!-- Donate button -->
+  <a href="Donate.html" class="donate-btn">Donate Now</a>
+</section>
+
+<section id="projects">
+  <h2>Our Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Education</h3>
+      <p>Providing quality education to children.</p>
+    </div>
+    <div class="card">
+      <h3>Healthcare</h3>
+      <p>Improving access to medical services.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>Empowering local communities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IMPACT STATISTICS ===================== -->
+<section id="impact">
+  <h2>Our Impact</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3><span class="counter" data-target="5000">0</span>+</h3>
+      <p>Children Supported</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="counter" data-target="120">0</span>+</h3>
+      <p>Communities Reached</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="counter" data-target="250">0</span>+</h3>
+      <p>Volunteers</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="counter" data-target="50">0</span>+</h3>
+      <p>Health Programs</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUR STORY ===================== -->
+<section id="story">
+  <h2>Our Story</h2>
+  <p>Glow Up Kids Support Foundation started with a simple mission: to bring hope and support to underserved communities. From a small group of volunteers, we have grown into an organization impacting thousands of lives through education, healthcare, and empowerment.</p>
+
+  <div class="cards">
+    <div class="card">
+      <img src="front reaching out.jpg" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <p>Our early days reaching out to children in need.</p>
+    </div>
+    <div class="card">
+      <img src="abuja-nigeria-march-06-2021-260nw-1933103375.webp" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <p>Providing healthcare services in rural areas.</p>
+    </div>
+    <div class="card">
+      <img src="pict_large.jpg" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <p>Empowering communities through skill programs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials">
+  <h2>Testimonials</h2>
+  <div class="cards">
+    <div class="card">
+      <p>"This NGO changed my life. I now have access to education and a brighter future."</p>
+      <h4>- Amina, Student</h4>
+    </div>
+    <div class="card">
+      <p>"Their healthcare outreach saved lives in our village. We are grateful."</p>
+      <h4>- Mr. Okeke, Community Leader</h4>
+    </div>
+    <div class="card">
+      <p>"Supporting this organization is the best decision I ever made."</p>
+      <h4>- Sarah, Donor</h4>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@Glow Up Kids Support foundation.org</p>
+</section>
+
+<footer>
+  <p>© 2026 Glow Up Kids Support Foundation </p>
+</footer>
+
+<script>
+  let index = 0;
+
+  /* Function to display a specific slide */
+  function showSlide(i) {
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+
+    // Loop back when reaching end or beginning
+    if (i >= total) index = 0;
+    else if (i < 0) index = total - 1;
+    else index = i;
+
+    // Move slides horizontally
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  /* Move to next slide */
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  /* Move to previous slide */
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+
+  /* Auto slide every 4 seconds */
+  setInterval(() => {
+    nextSlide();
+  }, 4000);
+
+  /* ===================== IMPACT COUNTER ===================== */
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = target / 100;
+
+      if (current < target) {
+        counter.innerText = `${Math.ceil(current + increment)}`;
+        setTimeout(updateCounter, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCounter();
+  });
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
